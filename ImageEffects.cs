@@ -6,7 +6,7 @@ using System.Drawing.Imaging;
 
 public class ImageEffects : MonoBehaviour {
     Material mat;
-    public static string fileName = @"C:\Users\trep\Documents\Development\Unity\Tools\Assets\h.jpg";
+    public static string fileName = @"FilePath";
     Int32 size = 100;
 
     void Start()
@@ -17,7 +17,7 @@ public class ImageEffects : MonoBehaviour {
 
         EncoderParameters encoderParameters = new EncoderParameters(1);
         encoderParameters.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L);
-        bm.Save(@"C:\Users\trep\Documents\Development\Unity\Tools\Assets\output.jpg", GetEncoder(ImageFormat.Jpeg), encoderParameters);
+        bm.Save(@"FilePath", GetEncoder(ImageFormat.Jpeg), encoderParameters);
         // Texture imagee = Texture.file(@"C:\Users\trep\Documents\Development\Unity\Tools\Assets\output.jpg");
         //mat.mainTexture = imagee;
     }
